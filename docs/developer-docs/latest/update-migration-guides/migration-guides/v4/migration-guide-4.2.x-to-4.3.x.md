@@ -55,7 +55,7 @@ To change the script:
 2. Copy and paste the following line to the replace the `filename` key of the sqlite configuration:
 
 ```js
-filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+filename: path.resolve(process.env.PWD, env('DATABASE_FILENAME', '.tmp/data.db')),
 ```
 
 !!!include(developer-docs/latest/update-migration-guides/migration-guides/v4/snippets/Rebuild-and-start-snippet.md)!!!
